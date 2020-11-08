@@ -28,7 +28,7 @@ function loadContacts() {
     console.log("Contacts Loading");
 
     if (contactURLArray.length > loadingContact) {
-        loadNextContact(contactURLArray[loadingContact]);
+       loadNextContact(contactURLArray[loadingContact]);
     }
 }
 
@@ -40,13 +40,14 @@ function loadNextContact(URL) {
         console.log(contactRequest.responseText);
         var contact;
         contact = JSON.parse(contactRequest.responseText);
-        console.log("Contact: " + contact.firstName);
+        console.log("Contact: " + contact.firstName + " " + contact.lastName);
         contactArray.push(contact);
         document.getElementById("contactsID").innerHTML = JSON.stringify(contactArray);
 
         loadingContact++;
         if (contactURLArray.length > loadingContact) {
-            loadNextContact(contactURLArray[loadingContact]);
+            console.log("loading info");
+            setTimeout(() => {loadNextContact(contactURLArray[loadingContact])}, 1000);
         }
     }
 
@@ -55,5 +56,8 @@ function loadNextContact(URL) {
 
 function logContacts() {
     console.log("Contacts Loading");
-    console.log(contactArray);
+    setTimeout(() => {console.log("done in 3 seconds")}, 1000);
+    setTimeout(() => {console.log("done in 2 seconds")}, 2000);
+    setTimeout(() => {console.log("done in 1 second")}, 3000);
+    setTimeout(() => {console.log(contactArray)}, 4000);
 }
