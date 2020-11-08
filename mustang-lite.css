@@ -1,0 +1,35 @@
+div {
+    width: 2000px;
+    height: 2000px;
+    background-color: rgb(238, 255, 7);
+    text-align: left;
+  
+  }
+  
+  
+  h1 {
+    color: rgb(137, 241, 255);
+    font-size:40px;
+  }
+  
+  p {
+    color: rgb(255, 0, 0);
+    font-size:18px;
+  }
+  
+  button {
+    background-color: #f502c0;
+    border-radius: 50%;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  button:hover {
+      background-color: white;
+      color: red;
+  }
